@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "147977864827",
+    "firebase_url": "https://naro-9c61f.firebaseio.com",
+    "project_id": "naro-9c61f",
+    "storage_bucket": "naro-9c61f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147977864827:android:2a8a0b721895683f",
+        "android_client_info": {
+          "package_name": "gkk.flutter.naro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147977864827-i9bkc055eqb2t34fc357r4lldcej28kg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClztU4pKEhdjFXdq1xVLRDks9xM_t33Bg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147977864827-i9bkc055eqb2t34fc357r4lldcej28kg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
