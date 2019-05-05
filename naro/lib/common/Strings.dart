@@ -12,7 +12,12 @@ class Strings {
 
   // 메인화면
   static const String mainPage_title = "나로";
-
+  static const String mainPage_menu_meetingroom = "회의실 예약";
+  static const String mainPage_menu_kartrank = "카트라이더 리그";
+  static const String mainPage_menu_kartcami = "카트라이더 궁합";
+  static const String mainPage_menu_joins = "조인스";
+  static const String mainPage_menu_wiki = "핸드위키";
+  static const String mainPage_menu_settins = "설정";
 
 
 
