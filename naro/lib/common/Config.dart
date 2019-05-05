@@ -1,6 +1,5 @@
 class Config {
-  static const String appName = 'Naro Project';
-
+  static const String key_autoLogin = 'autoLogin';
 
 
 }
