@@ -4,33 +4,39 @@ import 'package:naro/common/Strings.dart';
 import 'package:naro/viewmodel/LoginViewModel.dart';
 
 class LoginPage extends StatefulWidget {
-  final String title = 'Login';
-
-  LoginPage({Key key, title}) : super(key: key);
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  _LoginPageState createState() {
+    return _LoginPageState();
+  }
+
 }
 
 
 class _LoginPageState extends State<LoginPage> {
+
   LoginViewModel loginViewModel = LoginViewModel();
 
+  bool _isAutoLogin = false;
 
-  @override
-  void initState() {
-    super.initState();
 
-    
+  void _isAutoLoginChanged(bool b) {
+    debugPrint('자동로그인 여부 = $b');
+    _isAutoLogin = b;
+    setState((){});
   }
 
+
+  void _loginButtonClicked() {
+    Navigator.of(context).pushReplacementNamed('/main');
+  }
 
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Text(Strings.loginPage_title),
       ),
       body: Center(
         child: Column(
@@ -54,29 +60,24 @@ class _LoginPageState extends State<LoginPage> {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
               child: RaisedButton(
-                onPressed: () {
-                  debugPrint("onClick Login Button");
-
-                },
+                onPressed: _loginButtonClicked,
                 child: Text(Strings.loginPage_login,
                   style: TextStyle(
                     fontSize: 20,
                   ),),),),
-            Row(
-              children: <Widget>[
-                Checkbox(
-                  value: true,
-                  onChanged: (b) {
-                    loginViewModel.setAutoLogin(b);
-                  },
-                ),
-                Text(Strings.loginPage_autoLogin)
-
-              ],
-            )
-          ],
-        ),
-      ),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  Checkbox(
+                    value: _isAutoLogin,
+                    onChanged: _isAutoLoginChanged,
+                  ),
+                  Text(Strings.loginPage_autoLogin)
+                ],
+              )),
+          ]))
     );
   }
 
